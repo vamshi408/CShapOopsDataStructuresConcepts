@@ -30,5 +30,23 @@ namespace CShapOopsDataStructures.DataStructures
             }
         }
 
+
+        /// <summary>
+        /// ConCat will club two arrays into one single Array
+        /// If we dont use .ToArray() at the ending of Concat method it will return all zeros
+        /// SO .ToArray() conversation is mandatory
+        /// </summary>
+        public void ConCatArrayConcept()
+        {
+            int[] c = new int[a.Length + b.Length];
+
+            c=a.Concat(b).ToArray();
+            
+            foreach (var data in c)
+            {
+                Console.WriteLine(data);
+            }
+        }
+
     }
 }

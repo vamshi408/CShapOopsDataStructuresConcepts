@@ -23,10 +23,13 @@ namespace CShapOopsDataStructures
             //queryable.GetIQueryableData();
             //Console.ReadKey();
 
-            ArrayExample copyToExamp = new ArrayExample();
-            copyToExamp.CopyTOArrayConcept();
-            Console.ReadKey();
+            //ArrayExample copyToExamp = new ArrayExample();
+            //copyToExamp.CopyTOArrayConcept();
+            //Console.ReadKey();
 
+            ArrayExample concatArrayExamp = new ArrayExample();
+            concatArrayExamp.ConCatArrayConcept();
+            Console.ReadKey();
 
         }
     }
