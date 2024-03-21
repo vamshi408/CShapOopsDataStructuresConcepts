@@ -15,8 +15,12 @@ namespace CShapOopsDataStructures
             //enumerator.GetIEnumeratorData();
             //Console.ReadKey();
 
-            IEnumerableExample enumerable = new IEnumerableExample();
-            enumerable.GetIEnumerableData();
+            //IEnumerableExample enumerable = new IEnumerableExample();
+            //enumerable.GetIEnumerableData();
+            //Console.ReadKey();
+
+            IQueryableExample queryable = new IQueryableExample();
+            queryable.GetIQueryableData();
             Console.ReadKey();
 
         }
