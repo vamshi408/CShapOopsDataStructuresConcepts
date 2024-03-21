@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\CollectionsClass.cs" />
+    <Compile Include="DataStructures\IEnumerableExample.cs" />
     <Compile Include="DataStructures\IEnumeratorExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Program.cs" />

@@ -11,8 +11,12 @@ namespace CShapOopsDataStructures
     {
         static void Main(string[] args)
         {
-            IEnumeratorExample enumerator= new IEnumeratorExample();
-            enumerator.GetIEnumeratorData();
+            //IEnumeratorExample enumerator= new IEnumeratorExample();
+            //enumerator.GetIEnumeratorData();
+            //Console.ReadKey();
+
+            IEnumerableExample enumerable = new IEnumerableExample();
+            enumerable.GetIEnumerableData();
             Console.ReadKey();
 
         }
