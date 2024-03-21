@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\ArrayExample.cs" />
     <Compile Include="DataStructures\CollectionsClass.cs" />
     <Compile Include="DataStructures\IEnumerableExample.cs" />
     <Compile Include="DataStructures\IEnumeratorExample.cs" />
