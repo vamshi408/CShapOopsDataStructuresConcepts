@@ -48,6 +48,7 @@
     <Compile Include="DataStructures\IEnumerableExample.cs" />
     <Compile Include="DataStructures\IEnumeratorExample.cs" />
     <Compile Include="DataStructures\IQuerableExample.cs" />
+    <Compile Include="DataStructures\YieldExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

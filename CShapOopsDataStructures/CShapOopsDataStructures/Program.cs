@@ -27,10 +27,14 @@ namespace CShapOopsDataStructures
             //copyToExamp.CopyTOArrayConcept();
             //Console.ReadKey();
 
-            ArrayExample concatArrayExamp = new ArrayExample();
-            concatArrayExamp.ConCatArrayConcept();
-            Console.ReadKey();
+            //ArrayExample concatArrayExamp = new ArrayExample();
+            //concatArrayExamp.ConCatArrayConcept();
+            //Console.ReadKey();
 
+            YieldExample yieldexample = new YieldExample();
+            yieldexample.Loop3();
+            yieldexample.Loop33();
+            Console.ReadKey();
         }
     }
 }
