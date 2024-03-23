@@ -45,19 +45,19 @@
   <ItemGroup>
     <Compile Include="DataStructures\ArrayExample.cs" />
     <Compile Include="DataStructures\CollectionsClass.cs" />
+    <Compile Include="DataStructures\CustomerCollectionModel.cs" />
     <Compile Include="DataStructures\IEnumerableExample.cs" />
     <Compile Include="DataStructures\IEnumeratorExample.cs" />
     <Compile Include="DataStructures\IQuerableExample.cs" />
     <Compile Include="DataStructures\YieldExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Oops\ExtensionMethodExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Oops\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using CShapOopsDataStructures.DataStructures;
+using CShapOopsDataStructures.Oops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,9 +32,24 @@ namespace CShapOopsDataStructures
             //concatArrayExamp.ConCatArrayConcept();
             //Console.ReadKey();
 
-            YieldExample yieldexample = new YieldExample();
-            yieldexample.Loop3();
-            yieldexample.Loop33();
+            //YieldExample yieldexample = new YieldExample();
+            //yieldexample.Loop3();
+            //yieldexample.Loop33();
+            //Console.ReadKey();
+
+
+            //string serverpath = "C://user//vamshi//bandi//data//row";
+            //Console.WriteLine("Loacl Path : "+serverpath);
+            //string convertedpath = ExtensionMethodExample.ExtensionString(serverpath);
+            //Console.WriteLine("Server Path : " + convertedpath);
+            //Console.ReadKey();
+
+            CollectionsClass collectionsClass = new CollectionsClass();
+            foreach(var data in collectionsClass.ExtendToCustomer())
+            {
+                Console.WriteLine(data.CustomerID);
+                Console.WriteLine(data.Name);
+            }
             Console.ReadKey();
         }
     }
