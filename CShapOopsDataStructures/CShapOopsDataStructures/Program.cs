@@ -5,13 +5,29 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CShapOopsDataStructures
 {
-    internal class Program
+    internal class Program : MethodOverridingExample
     {
+        //Ovverriding
+
+        public override void GetData()
+        {
+            Console.WriteLine("Derivide Class");
+        }
+
+        public class Derived2 : MethodOverridingExample
+        {
+            public override void GetData()
+            {
+                base.GetData();
+            }
+        }
+
         static void Main(string[] args)
         {
             //IEnumeratorExample enumerator= new IEnumeratorExample();
@@ -85,8 +101,17 @@ namespace CShapOopsDataStructures
             //Console.ReadKey();
 
 
-            ConstReadonlyExample constReadonlyExample = new ConstReadonlyExample("2%");
-            constReadonlyExample.GetConstReadOnlyValues();
+            //ConstReadonlyExample constReadonlyExample = new ConstReadonlyExample("2%");
+            //constReadonlyExample.GetConstReadOnlyValues();
+            //Console.ReadKey();
+
+
+            MethodOverridingExample methodOverridingExample = new MethodOverridingExample();
+            methodOverridingExample.GetData();
+            Program program = new Program();
+            program.GetData();
+            Derived2 derived2 = new Derived2();
+            derived2.GetData();
             Console.ReadKey();
 
         }
