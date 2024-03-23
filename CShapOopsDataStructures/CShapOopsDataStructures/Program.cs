@@ -1,7 +1,9 @@
 ﻿using CShapOopsDataStructures.DataStructures;
+using CShapOopsDataStructures.Models;
 using CShapOopsDataStructures.Oops;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,17 +41,50 @@ namespace CShapOopsDataStructures
 
 
             //string serverpath = "C://user//vamshi//bandi//data//row";
-            //Console.WriteLine("Loacl Path : "+serverpath);
+            //Console.WriteLine("Loacl Path : " + serverpath);
             //string convertedpath = ExtensionMethodExample.ExtensionString(serverpath);
             //Console.WriteLine("Server Path : " + convertedpath);
             //Console.ReadKey();
 
-            CollectionsClass collectionsClass = new CollectionsClass();
-            foreach(var data in collectionsClass.ExtendToCustomer())
-            {
-                Console.WriteLine(data.CustomerID);
-                Console.WriteLine(data.Name);
-            }
+            //CollectionsClass collectionsClass = new CollectionsClass();
+            //foreach(var data in collectionsClass.ExtendToCustomer())
+            //{
+            //    Console.WriteLine(data.CustomerID);
+            //    Console.WriteLine(data.Name);
+            //}
+            //Console.ReadKey();
+
+
+            RefOutExample refOutExample = new RefOutExample();
+
+
+
+            //List<EmployeeModel> obj2 = new List<EmployeeModel>();
+            //obj2 = refOutExample.GetDataWIthOutREF();
+
+            //foreach (EmployeeModel emp in obj2)
+            //{
+            //    Console.WriteLine(emp.EmpID);
+            //    Console.WriteLine(emp.EmpName);
+            //}
+
+            //Console.WriteLine("BREAK POINT A");
+
+            //List<EmployeeModel> obj = new List<EmployeeModel>();
+
+            //obj = refOutExample.GetDataWIthREF();
+
+            //foreach (EmployeeModel emp in obj)
+            //{
+            //    Console.WriteLine(emp.EmpID);
+            //    Console.WriteLine(emp.EmpName);
+            //}
+
+            int a;int b;
+            refOutExample.GetDataByOut(101, 202, out a, out b);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
             Console.ReadKey();
         }
     }

@@ -52,6 +52,7 @@
     <Compile Include="DataStructures\YieldExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Oops\ExtensionMethodExample.cs" />
+    <Compile Include="Oops\RefOutExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
