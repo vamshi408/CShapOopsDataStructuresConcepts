@@ -51,6 +51,7 @@
     <Compile Include="DataStructures\IQuerableExample.cs" />
     <Compile Include="DataStructures\YieldExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Oops\ConstReadonlyExample.cs" />
     <Compile Include="Oops\ExtensionMethodExample.cs" />
     <Compile Include="Oops\RefOutExample.cs" />
     <Compile Include="Program.cs" />

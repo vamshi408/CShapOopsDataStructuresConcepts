@@ -55,9 +55,7 @@ namespace CShapOopsDataStructures
             //Console.ReadKey();
 
 
-            RefOutExample refOutExample = new RefOutExample();
-
-
+            //RefOutExample refOutExample = new RefOutExample();
 
             //List<EmployeeModel> obj2 = new List<EmployeeModel>();
             //obj2 = refOutExample.GetDataWIthOutREF();
@@ -80,12 +78,17 @@ namespace CShapOopsDataStructures
             //    Console.WriteLine(emp.EmpName);
             //}
 
-            int a;int b;
-            refOutExample.GetDataByOut(101, 202, out a, out b);
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            //int a;int b;
+            //refOutExample.GetDataByOut(101, 202, out a, out b);
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.ReadKey();
 
+
+            ConstReadonlyExample constReadonlyExample = new ConstReadonlyExample("2%");
+            constReadonlyExample.GetConstReadOnlyValues();
             Console.ReadKey();
+
         }
     }
 }
