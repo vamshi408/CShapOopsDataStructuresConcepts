@@ -106,14 +106,24 @@ namespace CShapOopsDataStructures
             //Console.ReadKey();
 
 
-            MethodOverridingExample methodOverridingExample = new MethodOverridingExample();
-            methodOverridingExample.GetData();
-            Program program = new Program();
-            program.GetData();
-            Derived2 derived2 = new Derived2();
-            derived2.GetData();
-            Console.ReadKey();
+            //MethodOverridingExample methodOverridingExample = new MethodOverridingExample();
+            //methodOverridingExample.GetData();
+            //Program program = new Program();
+            //program.GetData();
+            //Derived2 derived2 = new Derived2();
+            //derived2.GetData();
+            //Console.ReadKey();
 
+            CollectionsClass collectionsClass = new CollectionsClass();
+
+            List<EmployeeModel> employees = collectionsClass.GetEmpList();
+            List<CustomerCollectionModel> customerCollectionModels = collectionsClass.ExtendToCustomer();
+
+            var tuple = Tuple.Create(employees, customerCollectionModels);
+
+            tuple.Item1.ToList().ForEach(x => Console.WriteLine(x.EmpID +x.EmpName ));
+            tuple.Item2.ToList().ForEach(x => Console.WriteLine(x.CustomerID + x.Name));
+            Console.ReadKey();
         }
     }
 }
