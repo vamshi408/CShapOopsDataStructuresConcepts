@@ -127,14 +127,21 @@ namespace CShapOopsDataStructures
             //Console.ReadKey();
 
 
-            CollectionsClass collectionsClass = new CollectionsClass();
-            List<EmployeeModel> employees = collectionsClass.GetEmpList();
-            GenericClassMedthodExample<List<EmployeeModel>> genericClassMedthodExample =
-                new DataStructures.GenericClassMedthodExample<List<EmployeeModel>>();
-            Console.WriteLine(genericClassMedthodExample.JSONConver(employees));
+            ////Generic Class
+            //CollectionsClass collectionsClass = new CollectionsClass();
+            //List<EmployeeModel> employees = collectionsClass.GetEmpList();
+            //GenericClassMedthodExample<List<EmployeeModel>> genericClassMedthodExample =
+            //    new DataStructures.GenericClassMedthodExample<List<EmployeeModel>>();
+            //Console.WriteLine(genericClassMedthodExample.JSONConver(employees));
+            //Console.ReadKey();
+
+            //Generic Method
+            GenericMethodExample genericMethodExample = new GenericMethodExample();
+            genericMethodExample.GetGmethod<int>("INTEGER", 100);
+            genericMethodExample.GetGmethod<double>("Decimal", 100.012);
+            genericMethodExample.GetGmethod<float>("Float", 100f);
+            genericMethodExample.GetGmethod<string>("String", "B VAMSHI KRISHNA");
             Console.ReadKey();
-
-
 
         }
     }
