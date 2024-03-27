@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,9 +49,13 @@
     <Compile Include="DataStructures\ArrayExample.cs" />
     <Compile Include="DataStructures\CollectionsClass.cs" />
     <Compile Include="DataStructures\CustomerCollectionModel.cs" />
+    <Compile Include="DataStructures\GenericClassMedthodExample.cs" />
     <Compile Include="DataStructures\IEnumerableExample.cs" />
     <Compile Include="DataStructures\IEnumeratorExample.cs" />
     <Compile Include="DataStructures\IQuerableExample.cs" />
+    <Compile Include="Design Patterns\CustomerRepository.cs" />
+    <Compile Include="Design Patterns\EmployeeRepository.cs" />
+    <Compile Include="Design Patterns\IRepository.cs" />
     <Compile Include="DataStructures\YieldExample.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Oops\ConstReadonlyExample.cs" />
@@ -60,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

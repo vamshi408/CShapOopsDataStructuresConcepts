@@ -114,16 +114,28 @@ namespace CShapOopsDataStructures
             //derived2.GetData();
             //Console.ReadKey();
 
+
+
+            //CollectionsClass collectionsClass = new CollectionsClass();
+            //List<EmployeeModel> employees = collectionsClass.GetEmpList();
+            //List<CustomerCollectionModel> customerCollectionModels = collectionsClass.ExtendToCustomer();
+
+            //var tuple = Tuple.Create(employees, customerCollectionModels);
+
+            //tuple.Item1.ToList().ForEach(x => Console.WriteLine(x.EmpID +x.EmpName ));
+            //tuple.Item2.ToList().ForEach(x => Console.WriteLine(x.CustomerID + x.Name));
+            //Console.ReadKey();
+
+
             CollectionsClass collectionsClass = new CollectionsClass();
-
             List<EmployeeModel> employees = collectionsClass.GetEmpList();
-            List<CustomerCollectionModel> customerCollectionModels = collectionsClass.ExtendToCustomer();
-
-            var tuple = Tuple.Create(employees, customerCollectionModels);
-
-            tuple.Item1.ToList().ForEach(x => Console.WriteLine(x.EmpID +x.EmpName ));
-            tuple.Item2.ToList().ForEach(x => Console.WriteLine(x.CustomerID + x.Name));
+            GenericClassMedthodExample<List<EmployeeModel>> genericClassMedthodExample =
+                new DataStructures.GenericClassMedthodExample<List<EmployeeModel>>();
+            Console.WriteLine(genericClassMedthodExample.JSONConver(employees));
             Console.ReadKey();
+
+
+
         }
     }
 }
