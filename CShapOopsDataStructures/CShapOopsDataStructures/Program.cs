@@ -246,26 +246,50 @@ namespace CShapOopsDataStructures
             example.Getdata().ForEach(x => Console.WriteLine(x));
             Console.ReadKey();
 
-            Console.WriteLine("Queues START");
-            QueueExample queue = new QueueExample();
-            Queue<string> stringsQueue = new Queue<string>();
-            stringsQueue = queue.Getdata();
-            Console.WriteLine(stringsQueue.Dequeue());
-            Console.ReadKey();
-            Console.WriteLine(stringsQueue.Dequeue());
-            Console.ReadKey();
-            Console.WriteLine("Queues END");
+            //Console.WriteLine("Queues START");
+            //QueueExample queue = new QueueExample();
+            //Queue<string> stringsQueue = new Queue<string>();
+            //stringsQueue = queue.GenericQueue();
+            //Console.WriteLine(stringsQueue.Dequeue());
+            //Console.ReadKey();
+            //Console.WriteLine(stringsQueue.Dequeue());
+            //Console.ReadKey();
+            //Console.WriteLine("Queues END");
 
 
-            Console.WriteLine("STACK START");
-            StackExample stackExample = new StackExample();
-            Stack<string> stringsStack = new Stack<string>();
-            stringsStack=stackExample.GetStack();
-            Console.WriteLine(stringsStack.Pop());
+            //Console.WriteLine("GENERIC STACK START");
+            //StackExample stackExample = new StackExample();
+            //Stack<string> stringsStack = new Stack<string>();
+            //stringsStack=stackExample.GenericStack();
+            //Console.WriteLine(stringsStack.Pop());
+            //Console.ReadKey();
+            //Console.WriteLine(stringsStack.Pop());
+            //Console.ReadKey();
+            //Console.WriteLine("GENERIC STACK END");
+            //Console.ReadKey();
+
+
+            Console.WriteLine("NON GENERIC STACK START");
+            StackExample stackExample1 = new StackExample();
+            Stack stringsStack1 = new Stack();
+            stringsStack1 = stackExample1.NonGenericStack();
+            Console.WriteLine(stringsStack1.Pop());
             Console.ReadKey();
-            Console.WriteLine(stringsStack.Pop());
+            Console.WriteLine(stringsStack1.Pop());
             Console.ReadKey();
-            Console.WriteLine("STACK END");
+            Console.WriteLine("NON GENERIC STACK END");
+            Console.ReadKey();
+
+
+            Console.WriteLine("Non Generic Queues START");
+            QueueExample queue1 = new QueueExample();
+            Queue stringsQueue1 = new Queue();
+            stringsQueue1 = queue1.NonGenericQueue();
+            Console.WriteLine(stringsQueue1.Dequeue());
+            Console.ReadKey();
+            Console.WriteLine(stringsQueue1.Dequeue());
+            Console.ReadKey();
+            Console.WriteLine("Non Generic Queues END");
             Console.ReadKey();
         }
     }

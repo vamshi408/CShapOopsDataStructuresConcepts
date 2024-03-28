@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace CShapOopsDataStructures.Collections
 {
     public class QueueExample
     {
-        public Queue<string> Getdata()
+        public Queue<string> GenericQueue()
         {
             //First In FIrs Out 
             //Token Systems in Banks,Ticktes,Orders etc
@@ -19,6 +20,21 @@ namespace CShapOopsDataStructures.Collections
                 
             queue.Enqueue("4");
             queue.Enqueue("5");
+            queue.Enqueue("6");
+            return queue;
+        }
+
+        public Queue NonGenericQueue()
+        {
+            //First In FIrs Out 
+            //Token Systems in Banks,Ticktes,Orders etc
+            Queue queue = new Queue();
+            queue.Enqueue("1");
+            queue.Enqueue("2VSADVCF");
+            queue.Enqueue("svsdv");
+
+            queue.Enqueue("4.222");
+            queue.Enqueue("vsdv");
             queue.Enqueue("6");
             return queue;
         }
