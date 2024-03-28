@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -49,7 +51,9 @@
     <Compile Include="Collections\ListExample.cs" />
     <Compile Include="Collections\QueueExample.cs" />
     <Compile Include="Collections\StackExample.cs" />
+    <Compile Include="CShap\APIcallFromCShapExapmle.cs" />
     <Compile Include="CShap\AsyncAwaitTaskExample.cs" />
+    <Compile Include="CShap\DynamicExample.cs" />
     <Compile Include="DataStructures\ArrayExample.cs" />
     <Compile Include="DataStructures\CollectionsClass.cs" />
     <Compile Include="DataStructures\CustomerCollectionModel.cs" />
