@@ -1,4 +1,5 @@
 ﻿using CShapOopsDataStructures.Collections;
+using CShapOopsDataStructures.CShap;
 using CShapOopsDataStructures.DataStructures;
 using CShapOopsDataStructures.Models;
 using CShapOopsDataStructures.Oops;
@@ -31,7 +32,7 @@ namespace CShapOopsDataStructures
             }
         }
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //IEnumeratorExample enumerator= new IEnumeratorExample();
             //enumerator.GetIEnumeratorData();
@@ -241,10 +242,10 @@ namespace CShapOopsDataStructures
             #endregion Array ArrayList
 
 
-            ListExample example = new ListExample();
-            Console.WriteLine("LIST");
-            example.Getdata().ForEach(x => Console.WriteLine(x));
-            Console.ReadKey();
+            //ListExample example = new ListExample();
+            //Console.WriteLine("LIST");
+            //example.Getdata().ForEach(x => Console.WriteLine(x));
+            //Console.ReadKey();
 
             //Console.WriteLine("Queues START");
             //QueueExample queue = new QueueExample();
@@ -269,27 +270,38 @@ namespace CShapOopsDataStructures
             //Console.ReadKey();
 
 
-            Console.WriteLine("NON GENERIC STACK START");
-            StackExample stackExample1 = new StackExample();
-            Stack stringsStack1 = new Stack();
-            stringsStack1 = stackExample1.NonGenericStack();
-            Console.WriteLine(stringsStack1.Pop());
-            Console.ReadKey();
-            Console.WriteLine(stringsStack1.Pop());
-            Console.ReadKey();
-            Console.WriteLine("NON GENERIC STACK END");
-            Console.ReadKey();
+            //Console.WriteLine("NON GENERIC STACK START");
+            //StackExample stackExample1 = new StackExample();
+            //Stack stringsStack1 = new Stack();
+            //stringsStack1 = stackExample1.NonGenericStack();
+            //Console.WriteLine(stringsStack1.Pop());
+            //Console.ReadKey();
+            //Console.WriteLine(stringsStack1.Pop());
+            //Console.ReadKey();
+            //Console.WriteLine("NON GENERIC STACK END");
+            //Console.ReadKey();
 
 
-            Console.WriteLine("Non Generic Queues START");
-            QueueExample queue1 = new QueueExample();
-            Queue stringsQueue1 = new Queue();
-            stringsQueue1 = queue1.NonGenericQueue();
-            Console.WriteLine(stringsQueue1.Dequeue());
-            Console.ReadKey();
-            Console.WriteLine(stringsQueue1.Dequeue());
-            Console.ReadKey();
-            Console.WriteLine("Non Generic Queues END");
+            //Console.WriteLine("Non Generic Queues START");
+            //QueueExample queue1 = new QueueExample();
+            //Queue stringsQueue1 = new Queue();
+            //stringsQueue1 = queue1.NonGenericQueue();
+            //Console.WriteLine(stringsQueue1.Dequeue());
+            //Console.ReadKey();
+            //Console.WriteLine(stringsQueue1.Dequeue());
+            //Console.ReadKey();
+            //Console.WriteLine("Non Generic Queues END");
+            //Console.ReadKey();
+
+
+
+            //AsyncAwaitTaskExample.Method1();
+            //AsyncAwaitTaskExample.Method2();
+            //Console.ReadKey();
+
+             int count= await AsyncAwaitTaskExample.FirstMethod();
+             AsyncAwaitTaskExample.SecondMethod(count);
+             AsyncAwaitTaskExample.ThirdMethod();
             Console.ReadKey();
         }
     }

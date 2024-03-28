@@ -49,6 +49,7 @@
     <Compile Include="Collections\ListExample.cs" />
     <Compile Include="Collections\QueueExample.cs" />
     <Compile Include="Collections\StackExample.cs" />
+    <Compile Include="CShap\AsyncAwaitTaskExample.cs" />
     <Compile Include="DataStructures\ArrayExample.cs" />
     <Compile Include="DataStructures\CollectionsClass.cs" />
     <Compile Include="DataStructures\CustomerCollectionModel.cs" />
