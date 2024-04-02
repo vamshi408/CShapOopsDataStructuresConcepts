@@ -22,12 +22,13 @@ namespace CShapOopsDataStructures
 {
     public class Program : APIcallFromCShapExapmle   
     {
-       
+       private static object _locker=new object();
         public static void Main(string[] args)
         {
             //ConcurrencyDemo();
             //ParallisamDemo();
-            TaskAwaiterCallBackDemo();
+            //TaskAwaiterCallBackDemo();
+            NormalThreadExample();
             Console.ReadKey(); ;
         }
 
@@ -176,5 +177,30 @@ namespace CShapOopsDataStructures
         }
 
         #endregion awaiter with OnCompleted call back function
+
+
+
+        #region Lock Monitor mutex & Semaphore
+
+        //Thread Example
+        public static void NormalThreadExample()
+        {
+            for(int i=0; i < 5; i++)
+            {
+              new Thread(DoSomeTaskNormal).Start();
+            }
+        }
+
+       
+        public static void DoSomeTaskNormal()
+        {
+           
+                Console.WriteLine("Start " + Thread.CurrentThread.ManagedThreadId.ToString() + " Started");
+                Thread.Sleep(200);
+                Console.WriteLine("End " + Thread.CurrentThread.ManagedThreadId.ToString() + " Completed");
+           
+        }
+
+        #endregion Lock Monitor mutex & Semaphore
     }
 }
