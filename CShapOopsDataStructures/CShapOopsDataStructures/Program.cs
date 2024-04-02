@@ -220,6 +220,36 @@ namespace CShapOopsDataStructures
             }
         }
 
+
+        //Monitor Example
+        public static void MonitorExample()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                new Thread(DoSomeTaskMonitor).Start();
+            }
+        }
+
+        public static void DoSomeTaskMonitor()
+        {
+            try
+            {
+                Monitor.Enter(_locker);
+
+                Console.WriteLine("Start " + Thread.CurrentThread.ManagedThreadId.ToString() + " Started");
+                Thread.Sleep(200);
+                Console.WriteLine("End " + Thread.CurrentThread.ManagedThreadId.ToString() + " Completed");
+
+            }
+            catch (Exception ex)
+            {
+                //log error
+            }
+            finally
+            {
+                Monitor.Exit(_locker);
+            }
+        }
         #endregion Lock Monitor mutex & Semaphore
     }
 }
