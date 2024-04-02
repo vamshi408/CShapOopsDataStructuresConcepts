@@ -201,6 +201,25 @@ namespace CShapOopsDataStructures
            
         }
 
+
+        //Lock Example
+        public static void LockExample()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                new Thread(DoSomeTaskLock).Start();
+            }
+        }
+
+        public static void DoSomeTaskLock()
+        {
+            lock (_locker) {
+                Console.WriteLine("Start " + Thread.CurrentThread.ManagedThreadId.ToString() + " Started");
+                Thread.Sleep(200);
+                Console.WriteLine("End " + Thread.CurrentThread.ManagedThreadId.ToString() + " Completed");
+            }
+        }
+
         #endregion Lock Monitor mutex & Semaphore
     }
 }
