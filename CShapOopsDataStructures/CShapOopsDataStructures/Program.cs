@@ -26,7 +26,8 @@ namespace CShapOopsDataStructures
         public static void Main(string[] args)
         {
             //ConcurrencyDemo();
-            ParallisamDemo();
+            //ParallisamDemo();
+            TaskAwaiterCallBackDemo();
             Console.ReadKey(); ;
         }
 
@@ -109,5 +110,71 @@ namespace CShapOopsDataStructures
 
         #endregion Parallisam
 
+
+
+
+        #region awaiter with OnCompleted call back function
+        //Task with awaiter call back function
+
+        public static void TaskAwaiterCallBackDemo()
+        {
+            Console.WriteLine("Call Back Demo");
+
+
+           var task1= Task.Run(() =>
+            {
+                Download1();
+            });
+           var task2= Task.Run(() =>
+            {
+              return  Download2();
+            });
+
+            var awaiter2 = task2.GetAwaiter();
+            awaiter2.OnCompleted(async ()=>{
+
+                Console.WriteLine("OnCompleted call back for Download2");
+                var result2=awaiter2.GetResult();
+                Download3(result2);
+            });
+
+
+
+
+            //Task.WaitAll(task1,task2);
+
+            //var awaiter1=task1.GetAwaiter();
+            //var awaiter2=task2.GetAwaiter();
+
+            //var result2 = awaiter2.GetResult();
+            //Download3(result2);
+
+
+
+        }
+
+        public static void Download1()
+        {
+            Console.WriteLine("Downloading 1");
+            Task.Delay(100000);
+        }
+
+        public static string Download2()
+        {
+            Console.WriteLine("Downloading 2");
+            Task.Delay(100000);
+            Console.WriteLine("25MB");
+            return "25MB";
+        }
+
+        public static string Download3(string download2)
+        {
+            Console.WriteLine("Downloading 3");
+            Task.Delay(10000);
+            Console.WriteLine("Download2 =+" + download2 + " Download3= 500MB");
+            return "Download2 =+" + download2 + " Download3= 500MB";
+        }
+
+        #endregion awaiter with OnCompleted call back function
     }
 }
