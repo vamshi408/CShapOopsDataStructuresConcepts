@@ -23,12 +23,33 @@ namespace CShapOopsDataStructures
     public class Program : APIcallFromCShapExapmle   
     {
        private static object _locker=new object();
+       static ManualResetEvent resetEvent= new ManualResetEvent(false);
+        static AutoResetEvent autoResetEvent= new AutoResetEvent(true);
         public static void Main(string[] args)
         {
             //ConcurrencyDemo();
             //ParallisamDemo();
             //TaskAwaiterCallBackDemo();
-            NormalThreadExample();
+            //NormalThreadExample();
+
+            /////////Manual Reset//////////////
+            //new Thread(writeThread).Start();
+
+            //for (int i=0; i<5; i++)
+            //{
+            //    new Thread(readingThread).Start();
+            //}
+
+
+
+            /////////Auto Reset//////////////
+            for (int i = 0; i < 5; i++)
+            {
+                new Thread(writeAutoThread).Start();
+            }
+
+            new Thread(readingAutoThread).Start();
+
             Console.ReadKey(); ;
         }
 
@@ -251,5 +272,54 @@ namespace CShapOopsDataStructures
             }
         }
         #endregion Lock Monitor mutex & Semaphore
+
+        #region ManualReset
+
+        
+        public static void writeThread()
+        {
+            resetEvent.Reset();
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId+ " Writing Started");
+            Thread.Sleep(5000);
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Writing End");
+            resetEvent.Set();
+
+        }
+
+        public static void readingThread()
+        {
+            
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Reading Started by waiting");
+            resetEvent.WaitOne();
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Reading End");
+
+        }
+
+        #endregion ManualReset
+
+
+        #region AutoReset
+
+
+        public static void writeAutoThread()
+        {
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " WAITING ......");
+            autoResetEvent.WaitOne();
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Writing Started");
+            Thread.Sleep(5000);
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Writing End");
+            autoResetEvent.Set();
+
+        }
+
+        public static void readingAutoThread()
+        {
+
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Reading Started by waiting");        
+            Console.WriteLine(Thread.CurrentThread.ManagedThreadId + " Reading End");
+
+        }
+
+        #endregion AutoReset
     }
 }
